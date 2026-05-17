@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Architecture Blog — Nordic Design and Sustainable Urbanism</title>
+    <meta name="description" content="Architecture editorial on Nordic design, modern interiors, and sustainable urbanism — photography, essays, and analysis from across Scandinavia and beyond." />
+    <meta name="author" content="Architecture Blog" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="canonical" href="https://architecture-blog.vercel.app/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!--
+      FOUC prevention: apply the saved theme class to <html> before the React
+      bundle parses. ThemeProvider re-applies the same class on mount, so this
+      is a pure pre-paint sync.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("editorial-theme");
+          var theme =
+            stored === "light" || stored === "dark" || stored === "system"
+              ? stored
+              : "system";
+          var resolved =
+            theme === "system"
+              ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : theme;
+          document.documentElement.classList.add(resolved);
+          document.documentElement.style.colorScheme = resolved;
+        } catch (e) {
+          /* localStorage blocked — leave default styles. */
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+    <meta property="og:title" content="Architecture Blog — Nordic Design and Sustainable Urbanism" />
+    <meta property="og:description" content="Architecture editorial on Nordic design, modern interiors, and sustainable urbanism — photography, essays, and analysis from across Scandinavia and beyond." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://architecture-blog.vercel.app/" />
+    <meta property="og:site_name" content="Architecture Blog" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="/social-card.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/social-card.svg" />
+    <!--
+      twitter:site is intentionally omitted until a real handle is configured
+      in src/lib/site.ts (SITE_TWITTER). Seo.tsx will inject it dynamically on
+      route changes once that value is set.
+    -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://architecture-blog.vercel.app/#website",
+            "url": "https://architecture-blog.vercel.app/",
+            "name": "Architecture Blog",
+            "description": "Architecture editorial on Nordic design, modern interiors, and sustainable urbanism.",
+            "inLanguage": "en-US",
+            "publisher": { "@id": "https://architecture-blog.vercel.app/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://architecture-blog.vercel.app/#organization",
+            "name": "Architecture Blog",
+            "url": "https://architecture-blog.vercel.app/",
+            "logo": "https://architecture-blog.vercel.app/social-card.svg"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

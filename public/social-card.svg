@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Architecture Blog social preview</title>
+  <desc id="desc">Editorial social card for Architecture Blog.</desc>
+  <rect width="1200" height="630" fill="#f5f1ea"/>
+  <rect x="58" y="58" width="1084" height="514" fill="#101418"/>
+  <path d="M140 489h920" stroke="#f5f1ea" stroke-width="3"/>
+  <path d="M214 489V188h175v301" fill="none" stroke="#f5f1ea" stroke-width="9"/>
+  <path d="M454 489V134h131v355" fill="none" stroke="#f5f1ea" stroke-width="9"/>
+  <path d="M650 489V228h232v261" fill="none" stroke="#f5f1ea" stroke-width="9"/>
+  <path d="M219 249h166M219 314h166M219 379h166M459 197h121M459 260h121M459 323h121M459 386h121M655 294h222M655 360h222M655 426h222" stroke="#c9a45d" stroke-width="5"/>
+  <circle cx="969" cy="177" r="72" fill="#c9a45d"/>
+  <text x="140" y="108" fill="#f5f1ea" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="2">ARCHITECTURE BLOG</text>
+  <text x="140" y="555" fill="#f5f1ea" font-family="Georgia, serif" font-size="34">Nordic design, sustainable buildings, and urban architecture</text>
+</svg>
